@@ -17,6 +17,9 @@ import { TabViewModule } from 'primeng/tabview';
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 import { ImageModule } from 'primeng/image';
 import { CarouselModule } from 'primeng/carousel';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpinnerService } from './services/spinner.service';
+import { httpInterceptProviders } from '../app/http-interceptors/index';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { CarouselModule } from 'primeng/carousel';
     ItemsBannerComponent,
     ItemComponent,
     MovieComponent,
-    VideoEmbedComponent
+    VideoEmbedComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,7 @@ import { CarouselModule } from 'primeng/carousel';
     ImageModule,
     CarouselModule
   ],
-  providers: [],
+  providers: [SpinnerService, httpInterceptProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
