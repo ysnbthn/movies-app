@@ -20,6 +20,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerService } from './services/spinner.service';
 import { httpInterceptProviders } from '../app/http-interceptors/index';
+import { GenresComponent } from './pages/genres/genres.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { httpInterceptProviders } from '../app/http-interceptors/index';
     ItemComponent,
     MovieComponent,
     VideoEmbedComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,

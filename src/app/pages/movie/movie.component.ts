@@ -26,8 +26,8 @@ export class MovieComponent implements OnInit, OnDestroy {
     this.init();
 
     this.router.events.subscribe((evt) => {
-      this.init();
       if (!(evt instanceof NavigationEnd)) {
+        this.init();
         return;
       }
       window.scrollTo(0, 0);

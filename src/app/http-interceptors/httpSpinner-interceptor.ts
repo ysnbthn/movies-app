@@ -16,6 +16,7 @@ export class HttpSpinnerInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       tap({
         next: (event) => {
+          // 4 response demekmiş orjinalinde farklı bir şey yazıyordu
           if (event.type === 4) {
             this.spinnerService.requestEnded();
           }

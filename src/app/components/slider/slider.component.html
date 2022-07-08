@@ -1,6 +1,6 @@
 <div class="slider">
   <ng-container *ngFor="let item of items; let i = index">
-    <div class="slide" *ngIf="i == currentSlideIndex" @slideFade>
+    <a class="slide" *ngIf="i == currentSlideIndex" @slideFade [routerLink]="'/movie/' + item.id">
       <div class="slide-bg">
         <img class="slide-bg-image" [src]="imagesSizes.large + item.backdrop_path" alt="" />
       </div>
@@ -20,6 +20,6 @@
           {{ item.overview.length < 500 ? item.overview : item.overview.substring(0, 500) + '...' }}
         </div>
       </div>
-    </div>
+    </a>
   </ng-container>
 </div>

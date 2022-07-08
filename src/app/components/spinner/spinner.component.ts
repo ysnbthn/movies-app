@@ -1,5 +1,4 @@
 import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
-import { first } from 'rxjs';
 import { SpinnerService } from 'src/app/services/spinner.service';
 
 @Component({
