@@ -1,6 +1,6 @@
 @import '../../../styles/colors';
 
-.movie-item {
+.item {
   position: relative;
   display: block;
   min-height: 380px;
@@ -26,6 +26,11 @@
     background-color: $bgColorLight;
     border-radius: 5px;
     padding: 5px 10px;
+
+    .app-icon {
+      margin-right: 5px;
+      color: #d4af37;
+    }
   }
 
   &-title {
@@ -33,8 +38,4 @@
     font-weight: bold;
     margin: 0.5rem;
   }
-}
-.app-icon {
-  margin-right: 5px;
-  color: #d4af37;
 }

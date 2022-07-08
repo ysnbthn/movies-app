@@ -1,6 +1,7 @@
 import { Item } from '../components/item/item';
+import { Genre } from './genre';
 
-export interface Movie {
+export interface TvShow {
   adult: boolean;
   backdrop_path: string;
   genre_ids: number[];
@@ -11,61 +12,57 @@ export interface Movie {
   popularity: number;
   poster_path: string;
   release_date: string;
-  title: string;
+  name: string;
   video: boolean;
   vote_average: number;
   vote_count: number;
   revenue: number;
   runtime: number;
   status: string;
+  title: string;
   genres: Genre[];
 }
 
-export interface MovieDto {
+export interface TvShowDto {
   page: number;
-  results: Movie[];
+  results: TvShow[];
   total_results: number;
   total_pages: number;
 }
 
-export interface Genre {
+export interface TvShowVideoDto {
   id: number;
-  name: string;
+  results: TvShowVideo[];
 }
 
-export interface MovieVideoDto {
-  id: number;
-  results: MovieVideo[];
-}
-
-export interface MovieVideo {
+export interface TvShowVideo {
   site: string;
   key: string;
 }
 
-export interface MovieImages {
+export interface TvShowImages {
   backdrops: {
     file_path: string;
   }[];
 }
 
-export interface MovieCredits {
+export interface TvShowCredits {
   cast: {
     name: string;
     profile_path: string;
   }[];
 }
 
-export const mapMovieToItem = (movie: Movie): Item => {
+export const mapTvShowToItem = (tvShow: TvShow): Item => {
   return {
-    id: movie.id,
-    title: movie.title,
-    poster_path: movie.poster_path,
-    vote_average: movie.vote_average,
-    backdrop_path: movie.backdrop_path,
-    vote_count: movie.vote_count,
-    release_date: movie.release_date,
-    overview: movie.overview,
-    routePath: '/movie/' + movie.id
+    id: tvShow.id,
+    title: tvShow.name,
+    poster_path: tvShow.poster_path,
+    vote_average: tvShow.vote_average,
+    backdrop_path: tvShow.backdrop_path,
+    vote_count: tvShow.vote_count,
+    release_date: tvShow.release_date,
+    overview: tvShow.overview,
+    routePath: '/tvshow/' + tvShow.id
   };
 };

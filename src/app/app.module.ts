@@ -22,6 +22,8 @@ import { SpinnerService } from './services/spinner.service';
 import { httpInterceptProviders } from '../app/http-interceptors/index';
 import { GenresComponent } from './pages/genres/genres.component';
 import { InputTextModule } from 'primeng/inputtext';
+import { TvShowComponent } from './pages/tvshow/tvshow.component';
+import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { InputTextModule } from 'primeng/inputtext';
     MovieComponent,
     VideoEmbedComponent,
     SpinnerComponent,
-    GenresComponent
+    GenresComponent,
+    TvShowComponent,
+    TvShowsComponent
   ],
   imports: [
     BrowserModule,
