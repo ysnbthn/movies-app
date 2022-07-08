@@ -21,6 +21,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerService } from './services/spinner.service';
 import { httpInterceptProviders } from '../app/http-interceptors/index';
 import { GenresComponent } from './pages/genres/genres.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { GenresComponent } from './pages/genres/genres.component';
     PaginatorModule,
     TabViewModule,
     ImageModule,
-    CarouselModule
+    CarouselModule,
+    InputTextModule
   ],
   providers: [SpinnerService, httpInterceptProviders],
   bootstrap: [AppComponent]
